@@ -26,7 +26,6 @@ import ResetPassword from "./components/ForgotPassword/ResetPassword";
 function App() {
   return (
     <>
-    
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />

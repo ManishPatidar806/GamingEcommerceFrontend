@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Loader from "../AlertAndHelper/Loader";
 import BackgroundImage from "../../resources/BackgroundImage/BACKGROUND.jpg";
@@ -10,7 +10,7 @@ const Login = () => {
   const [formData, setFormData] = useState({});
   const [error, setError] = useState(null);
   const [flag, setFlag] = useState(false);
-  const [selectrole, Setselectrole] = useState("USER");
+  const [selectrole, Setselectrole] = useState("user");
   const [loading, setLoading] = useState(false);
   const handleChange = (e) => {
     setFormData({
@@ -133,12 +133,12 @@ const Login = () => {
                     </label>
                   </div>
                 </div>
-                <a
-                  href="/sendOtp"
+                <Link
+                  to="/sendOtp"
                   className="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500"
                 >
                   Forgot password?
-                </a>
+                </Link>
               </div>
               {flag && error ? (
                 <div className="text-red-600">{error}</div>
@@ -153,12 +153,12 @@ const Login = () => {
               </button>
               <p className="text-sm font-light text-gray-500 dark:text-gray-400 text-center">
                 Don’t have an account yet?{" "}
-                <a
-                  href="/signup"
+                <Link
+                  to="/signup"
                   className="font-medium text-primary-600 hover:underline dark:text-blue-700"
                 >
                   Sign up
-                </a>
+                </Link>
               </p>
             </form>
 
@@ -213,23 +213,24 @@ const Login = () => {
             <div className="text-gray-500 flex text-center flex-col mt-4 items-center text-sm">
               <p className="cursor-default">
                 By signing in, you agree to our{" "}
-                <a
+
+                <Link
                   className="group text-blue-400 transition-all duration-100 ease-in-out"
-                  href="#"
+                  to="#"
                 >
                   <span className="cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
                     Terms
                   </span>
-                </a>{" "}
+                </Link>{" "}
                 and{" "}
-                <a
+                <Link
                   className="group text-blue-400 transition-all duration-100 ease-in-out"
-                  href="#"
+                  to="#"
                 >
                   <span className="cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
                     Privacy Policy
                   </span>
-                </a>
+                </Link>
               </p>
             </div>
           </div>

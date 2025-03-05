@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -185,7 +186,7 @@ const Navbar = () => {
           id="drawer-navigation-label"
           className="text-base font-semibold  uppercase text-blue-500"
         >
-          Gamify
+          Gameingzone
         </h5>
         <button
           type="button"
@@ -230,8 +231,8 @@ const Navbar = () => {
             </li>
 
             <li>
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <img
@@ -239,13 +240,13 @@ const Navbar = () => {
                   className="h-8 w-8 text-gray-500"
                 ></img>
                 <span className="ms-3">Home</span>
-              </a>
+              </Link>
             </li>
 
             {localStorage.getItem("role") === "ADMIN" && (
               <li>
-                <a
-                  href="/adminAllProduct"
+                <Link
+                  to="/adminAllProduct"
                   className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                 >
                   <img
@@ -253,14 +254,14 @@ const Navbar = () => {
                     className="h-8 w-8 text-gray-500"
                   ></img>
                   <span className="ms-3">Admin Dashboard</span>
-                </a>
+                </Link>
               </li>
             )}
             {localStorage.getItem("role") === "USER" && (
               <>
                 <li>
-                  <a
-                    href="/cartitem"
+                  <Link
+                    to="/cartitem"
                     className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                   >
                     <img
@@ -268,11 +269,11 @@ const Navbar = () => {
                       className="h-8 w-8 text-gray-500"
                     ></img>
                     <span className="ms-3">Cart</span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/orderHistory"
+                  <Link
+                    to="/orderHistory"
                     className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                   >
                     <img
@@ -280,15 +281,15 @@ const Navbar = () => {
                       className="h-8 w-8 text-gray-500"
                     ></img>
                     <span className="ms-3">OrderHistory</span>
-                  </a>
+                  </Link>
                 </li>
               </>
             )}
             {localStorage.getItem("token") && (
               <>
             <li>
-              <a
-                href="/profile"
+              <Link
+                to="/profile"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <img
@@ -296,7 +297,7 @@ const Navbar = () => {
                   className="h-8 w-8 text-gray-500"
                 ></img>
                 <span className="ms-3">Profile</span>
-              </a>
+              </Link>
             </li>
             <li>
               <a
@@ -313,8 +314,8 @@ const Navbar = () => {
             {!localStorage.getItem("token") && (
               <>
             <li>
-              <a
-                href="/login"
+              <Link
+                to="/login"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <img
@@ -322,11 +323,11 @@ const Navbar = () => {
                   className="h-8 w-8 text-gray-500"
                 ></img>
                 <span className="ms-3">LogIn</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-               href="/signup"
+              <Link
+               to="/signup"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <img
@@ -334,7 +335,7 @@ const Navbar = () => {
                   className="h-8 w-8 text-gray-500"
                 ></img>
                 <span className="ms-3">Signup</span>
-              </a>
+              </Link>
             </li></>)}
 
           </ul>

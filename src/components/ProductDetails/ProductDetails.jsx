@@ -263,7 +263,7 @@ const ProductDetails = () => {
           <p className="mx-5 my-2 w-full text-gray-400 ">
             {product.description}
           </p>
-          <p className="mx-5 my-2 text-green-300">Price:{product.price}$</p>
+          <p className="mx-5 my-2 text-green-300">Price:₹{product.price}</p>
           <p className="mx-5 my-2 text-gray-300">Total Download:100M+</p>
           <p className="mx-5 my-2 text-pink-400">
             Publisher : {product.company}

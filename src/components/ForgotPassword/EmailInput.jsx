@@ -22,7 +22,7 @@ const EmailInput = () => {
     setLoader(true)
     try {
       const response = await axios.post(
-        `http://localhost:8080/forgotPassword/sendOtp?email=${email}`
+        `${import.meta.env.VITE_APP_API_URL}/v1/forgotPassword/sendOtp?email=${email}`
       );
       setSuccess(true);
       setErrorFlag(true);

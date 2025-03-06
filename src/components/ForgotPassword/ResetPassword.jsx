@@ -39,7 +39,7 @@ export default function ResetPassword() {
     setLoader(true);
     try {
       const response = await axios.post(
-        `http://localhost:8080/forgotPassword/verifyOtp?email=${email}&otp=${otp.join(
+        `${import.meta.env.VITE_APP_API_URL}/v1/forgotPassword/verifyOtp?email=${email}&otp=${otp.join(
           ""
         )}`
       );

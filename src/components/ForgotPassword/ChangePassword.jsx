@@ -42,7 +42,7 @@ const ChangePassword = () => {
         return;
       }
       const response = await axios.post(
-        `http://localhost:8080/forgotPassword/passwordChange?password=${formData.password}&email=${email}&role=${selectrole}`
+        `${import.meta.env.VITE_APP_API_URL}/v1/forgotPassword/passwordChange?password=${formData.password}&email=${email}&role=${selectrole}`
       );
 
       setLoader(false);

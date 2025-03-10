@@ -1,8 +1,42 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Gameingzone  (E-Commerce Platform for Gaming Products)
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a Frontend of  e-commerce platform designed for purchasing gaming products. Users can create accounts, view their purchase history, and manage their carts by adding or removing products. The platform also supports password recovery, account deletion, and a review system. Secure payments are enabled via Stripe integration.
+
+## Features
+
+- User authentication and account management (signup, login, password recovery, account deletion)
+- Product catalog browsing and cart management
+- Order history tracking
+- User review system for products
+- Secure online payments with Stripe
+- Email verification via Spring Boot Starter Mail
+- Cloud-based product image storage using Cloudinary
+- Service monitoring and health checks with Codecentric Admin Server
+
+## Tech Stack
+
+### Frontend:
+- Reactjs is used for smooth running.
+- Axios is used for Api Fetching.
+- Flowbite is used for UI component.
+
+
+## Installation & Setup
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/ManishPatidar806/GamingEcommerceFrontend.git
+    ```
+
+
+## Deployment
+
+The frontend is deployed on Vercel.
+
+
+## License
+
+This project is open-source and available under the MIT License.

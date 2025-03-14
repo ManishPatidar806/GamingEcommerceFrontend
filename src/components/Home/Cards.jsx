@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Loader from "../AlertAndHelper/Loader";
+import Loader from "../AlertAndHelper/MainLoader";
 import Alert from "../AlertAndHelper/Alert";
 
 const Cards = () => {

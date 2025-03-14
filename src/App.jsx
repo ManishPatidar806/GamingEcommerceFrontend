@@ -21,6 +21,7 @@ import FailedPayment from "./components/Payment/FailedPayment";
 import EmailInput from "./components/ForgotPassword/EmailInput";
 import ChangePassword from "./components/ForgotPassword/ChangePassword";
 import ResetPassword from "./components/ForgotPassword/ResetPassword";
+import MainLoader from "./components/AlertAndHelper/MainLoader";
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
         <Route path="/addProduct" element={<ProductForm />} />
         <Route path="/updateProduct" element={<ProductUpdate />} />
         <Route path="/loader" element={<Loader />} />
+        <Route path="/mainloader" element={<MainLoader/>}/>
         <Route path="/orderHistory" element={<PurchaseProduct />} />
         <Route path="/success" element={<SuccessPayment />} />
         <Route path="/failed" element={<FailedPayment />} />
